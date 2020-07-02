@@ -1,0 +1,65 @@
+<form [formGroup]="rohanInForm">
+    
+      
+
+<div fxLayoutAlgin="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+    <mat-toolbar color="primary">Login Page</mat-toolbar>
+    </mat-card>
+</div>
+<br>
+<div style="text-align: center;">
+<mat-form-field appearance="outline">
+    <mat-label>Username</mat-label>
+    <input matInput type="username" formControlName="username">
+    <mat-icon matSuffix></mat-icon>
+</mat-form-field>
+<span *ngIf="rohanInForm.controls.username.errors">
+<div *ngIf="rohanInForm.controls.username.errors.required">Contain Text Only</div>
+<div *ngIf="rohanInForm.controls.username.errors.minlength">Length only 6 string</div>
+</span>
+</div>
+<div style="text-align: center;">
+
+    <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" formControlName="password">
+
+    <mat-icon matSuffix></mat-icon>
+    <mat-hint>Hint</mat-hint>
+</mat-form-field>
+
+<span *ngIf="rohanInForm.controls.password.errors">
+    <div *ngIf="rohanInForm.controls.password.errors.required">contain </div>
+    <div *ngIf="rohanInForm.controls.password.errors.minlength">Length only 6 string</div>
+    </span>
+
+<br>
+</div>
+<div style="text-align: center;">
+
+<button mat-raised-button (click)="rout2()" color="accent">Login</button>
+{{str}}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+
